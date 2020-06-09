@@ -22,7 +22,7 @@ namespace ClassLibrary1.Repository
             {
                 objFromDb.Name = category.Name;
 
-                _db.SaveChanges();
+                
             }
         }
     }

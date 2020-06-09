@@ -25,7 +25,7 @@ namespace ClassLibrary1.Repository
             _db.SaveChanges();
         }
 
-        public ICategoryRepository Catefory { get; }
+        
         public ISP_Call SP_Call { get; }
     }
 }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -11,6 +11,10 @@
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.4" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.4" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.0-preview1.19508.20" />
+        <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.0.0">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.4" />
@@ -24,8 +28,22 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Areas\Admin\Controllers\" />
-      <Folder Include="Areas\Admin\Views\" />
+      <Content Update="Areas\Admin\Views\_ViewStart.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Areas\Admin\Views\_ViewImports.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Index.cshtml" />
     </ItemGroup>
 
 </Project>

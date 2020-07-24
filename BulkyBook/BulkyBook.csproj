@@ -28,6 +28,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Content Update="Areas\Admin\Views\Product\Index.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
       <Content Update="Areas\Admin\Views\_ViewStart.cshtml">
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -44,6 +48,10 @@
       <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Details.cshtml" />
       <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Edit.cshtml" />
       <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\Images\products\" />
     </ItemGroup>
 
 </Project>
